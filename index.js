@@ -11,6 +11,8 @@ module.exports.combos = require("./lib/Combos");
 module.exports.uidGenerator = uidGenerator;
 module.exports.generateUid = uidGenerator.generateUid;
 
+module.exports.SwarmPacker = require("./lib/SwarmPacker");
+
 module.exports.createPskConsole = function () {
   return require('./lib/pskconsole');
 };

@@ -10,7 +10,7 @@ module.exports.combos = require("./lib/Combos");
 
 module.exports.uidGenerator = uidGenerator;
 module.exports.generateUid = uidGenerator.generateUid;
-
+module.exports.AsyncDispatcher = require("./lib/AsyncDispatcher");
 module.exports.SwarmPacker = require("./lib/SwarmPacker");
 
 module.exports.createPskConsole = function () {

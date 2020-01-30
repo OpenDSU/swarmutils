@@ -17,6 +17,8 @@ module.exports.createPskConsole = function () {
   return require('./lib/pskconsole');
 };
 
+module.exports.pingPongFork = require('./lib/pingpongFork');
+
 
 if(typeof global.$$ == "undefined"){
   global.$$ = {};

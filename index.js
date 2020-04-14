@@ -12,7 +12,7 @@ module.exports.uidGenerator = uidGenerator;
 module.exports.generateUid = uidGenerator.generateUid;
 module.exports.TaskCounter = require("./lib/TaskCounter");
 module.exports.SwarmPacker = require("./lib/SwarmPacker");
-
+module.exports.path = require("./lib/path");
 module.exports.createPskConsole = function () {
   return require('./lib/pskconsole');
 };

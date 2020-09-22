@@ -27,3 +27,15 @@ if(typeof global.$$ == "undefined"){
 if(typeof global.$$.uidGenerator == "undefined"){
     $$.uidGenerator = module.exports.safe_uuid;
 }
+
+module.exports.convertToBuffer = function(uint8array){
+    const newBuffer = new Buffer(uint8array.byteLength);
+    let currentPos = 0;
+    const arrBuf = uint8array;
+    const partialDataView = new DataView(arrBuf);
+    for (let i = 0; i < arrBuf.byteLength; i++) {
+        newBuffer.writeUInt8(partialDataView.getUint8(i), currentPos);
+        currentPos += 1;
+    }
+    return newBuffer;
+}

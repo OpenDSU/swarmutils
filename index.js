@@ -31,9 +31,9 @@ if (typeof global.$$.uidGenerator == "undefined") {
 module.exports.convertToBuffer = function (uint8array) {
     let buffer;
     if (ArrayBuffer.isView(uint8array)) {
-        buffer = Buffer.from(uint8array.buffer)
+        buffer = $$.Buffer.from(uint8array.buffer)
     } else {
-        buffer = Buffer.from(uint8array);
+        buffer = $$.Buffer.from(uint8array);
     }
 
     return buffer;

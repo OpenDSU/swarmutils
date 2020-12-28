@@ -36,15 +36,15 @@ module.exports.createPskConsole = function () {
 module.exports.pingPongFork = require('./lib/pingpongFork');
 
 
-module.exports.convertToBuffer = function (uint8array) {
-    if ($$.Buffer.isBuffer(uint8array)) {
-        return uint8array;
+module.exports.ensureIsBuffer = function (data) {
+    if ($$.Buffer.isBuffer(data)) {
+        return data;
     }
     let buffer;
-    if (ArrayBuffer.isView(uint8array)) {
-        buffer = $$.Buffer.from(uint8array.buffer)
+    if (ArrayBuffer.isView(data)) {
+        buffer = $$.Buffer.from(data.buffer)
     } else {
-        buffer = $$.Buffer.from(uint8array);
+        buffer = $$.Buffer.from(data);
     }
     return buffer;
 }

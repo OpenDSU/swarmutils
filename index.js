@@ -37,6 +37,9 @@ module.exports.pingPongFork = require('./lib/pingpongFork');
 
 
 module.exports.convertToBuffer = function (uint8array) {
+    if ($$.Buffer.isBuffer(uint8array)) {
+        return uint8array;
+    }
     let buffer;
     if (ArrayBuffer.isView(uint8array)) {
         buffer = $$.Buffer.from(uint8array.buffer)

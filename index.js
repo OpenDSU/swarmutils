@@ -48,3 +48,6 @@ module.exports.ensureIsBuffer = function (data) {
     }
     return buffer;
 }
+
+module.exports.removeDir = require("./lib/removeDir").removeDir;
+module.exports.removeDirSync = require("./lib/removeDir").removeDirSync;

@@ -1,4 +1,4 @@
-require("../../../psknode/bundles/pskruntime");
+require("../../../psknode/bundles/testsRuntime");
 const assert = require("double-check").assert;
 const OwM = require("swarmutils").OwM;
 

@@ -1,24 +1,23 @@
-
 let cachedUIDGenerator = undefined;
 let cachedSafeUid = undefined;
 
-function initCache(){
-    if(cachedUIDGenerator === undefined){
+function initCache() {
+    if (cachedUIDGenerator === undefined) {
         cachedUIDGenerator = require("./lib/uidGenerator").createUidGenerator(200, 32);
-        let  sfuid = require("./lib/safe-uuid");
+        let sfuid = require("./lib/safe-uuid");
         sfuid.init(cachedUIDGenerator);
         cachedSafeUid = sfuid.safe_uuid;
     }
 }
 
 module.exports = {
-    get generateUid(){
+    get generateUid() {
         initCache();
         return cachedUIDGenerator.generateUid;
     },
-     safe_uuid: function(){
-         initCache();
-         return cachedSafeUid();
+    safe_uuid: function () {
+        initCache();
+        return cachedSafeUid();
     }
 };
 

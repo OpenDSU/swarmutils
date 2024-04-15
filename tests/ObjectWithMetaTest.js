@@ -2,7 +2,7 @@ require("../../../builds/output/testsRuntime");
 const assert = require("double-check").assert;
 const OwM = require("swarmutils").OwM;
 
-assert.callback("Testul_lui_Om", function(callback){
+assert.callback("Testul_lui_Om", function (callback) {
     let om = new OwM();
     assert.notNull(om.meta);
 
@@ -12,8 +12,10 @@ assert.callback("Testul_lui_Om", function(callback){
     om.setMeta(undefined, 5);
     assert.true(typeof om.getMeta(undefined) != "undefined", ": undefined is undefined");
 
-    om.setMeta(function(){}, 2);
-    assert.true(typeof om.getMeta(function(){}) != "undefined");
+    om.setMeta(function () {
+    }, 2);
+    assert.true(typeof om.getMeta(function () {
+    }) != "undefined");
 
     om.setMeta(5, 5);
     assert.true(om.getMeta(5) === 5);
@@ -26,7 +28,7 @@ assert.callback("Testul_lui_Om", function(callback){
             "metaprop": "supervalue"
         },
         "relationship": {
-            "meta":{}
+            "meta": {}
         }
     };
 

@@ -22,20 +22,16 @@
     "email": "salboaie@gmail.com",
     "url": "https://github.com/PrivateSky/swarmutils/issues"
   },
-
-
   "engines": {
     "node": ">=0.10.0"
   },
-
   "licenses": [
     {
       "type": "LGPL",
       "url": "http://www.gnu.org/licenses/lgpl.html"
     }
   ],
-  "dependencies" : {
-	
+  "dependencies": {
   },
   "optionalDependencies": {},
   "_engineSupported": true,
@@ -43,6 +39,5 @@
   "_nodeVersion": "v0.10.0",
   "_defaultsLoaded": true,
   "dist": {
-    
   }
 }
